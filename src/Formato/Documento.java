@@ -16,14 +16,12 @@ public class Documento extends DefaultStyledDocument{
 	private StyleContext cont;
 	private AttributeSet attr,attrBlack;
 	private final static Color r_PR = new Color(127, 0, 145);
-			//r_CAD = new Color(42, 0, 255);
 	private ArrayList<coloreado> a;
 	String currentString,oldString;
 	public Documento() {
 		cont = StyleContext.getDefaultStyleContext();
         attr = cont.addAttribute(cont.getEmptySet(),StyleConstants.Foreground,r_PR);
         attrBlack = cont.addAttribute(cont.getEmptySet(), StyleConstants.Foreground, Color.BLACK);
-        //attrBlue = cont.addAttribute(cont.getEmptySet(), StyleConstants.Foreground, r_CAD);
 	}
 	
 	@Override

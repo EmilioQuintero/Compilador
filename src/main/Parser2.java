@@ -51,7 +51,6 @@ public class Parser2 {
 			idx--;
 			Token caux = compo.get(idx);
 			cp = new Token(19, "", caux.getColumna(), caux.getFila());
-			//error(tipo,s);
 		}
 	}
 	private void error(int t,String to){
@@ -134,12 +133,9 @@ public class Parser2 {
 		c = cp;
 		Acomodar(Token.SE,"{");
 
-		//-----------------FD
 		c = cp;
-		//if(c.getTipo() == Componente.MOD || c.getTipo() == Componente.TIPO )
 
 		FD();
-		//-----------------S
 		S();
 		Acomodar(Token.SE,"}");
 	}
@@ -152,7 +148,6 @@ public class Parser2 {
 		}
 	}
 	private void VDN(){
-		//conDV++;
 		Token c= null ,caux = null;
 		c = cp;
 		String ty = null ,nom = null, val = null,alcance;

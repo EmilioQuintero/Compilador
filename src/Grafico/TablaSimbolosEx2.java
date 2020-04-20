@@ -55,7 +55,6 @@ public class TablaSimbolosEx2 extends JDialog{
 		tabla = new JTable( mo );
 		tabla.getTableHeader().setResizingAllowed(false);
 		tabla.getTableHeader().setReorderingAllowed(false);
-		//tabla.getColumnModel().getColumn(2).setPreferredWidth(10);
 		tabla.setFillsViewportHeight(true);
 		tabla.setRowHeight(22);
 		tabla.setDefaultRenderer(Object.class, new Formato());
