@@ -344,7 +344,6 @@ public class Ventana extends JFrame{
 				String texto = ach.OpenFile(Ventana.this), //Metodo que abre el Arhivo
 						n = ach.nombreArch,
 						dato = ach.txt;
-				//JOptionPane.showMessageDialog(null, dato);
 				boolean p1 = !texto.equals("");		//Verifica si se abrio algun archivo
 				if( p1 ){
 															//obtiene el indice de la pestaña actual
@@ -393,9 +392,7 @@ public class Ventana extends JFrame{
 				txtTrabajo = ks.getTxtTrabajo();							//...
 				ach = ks.getArchivo();
 				String dato = ach.txt,dato2 = txtTrabajo.getText();
-				//JOptionPane.showMessageDialog(null, dato+"\n"+dato2);
 				if( !dato.equals(dato2)){
-					//JOptionPane.showMessageDialog(null, "cerrado manual");
 					Object[] opciones = { "Si","No","Cancelar"};
 					
 					int n = JOptionPane.showOptionDialog(Ventana.this, "¿Desea guardar los cambios?"
@@ -407,19 +404,12 @@ public class Ventana extends JFrame{
 							} catch (IOException e1) {
 								e1.printStackTrace();
 							}
-							//System.exit(0);
 						}else if( n == JOptionPane.NO_OPTION)
 							workSpace.remove(d);
 				}else{
-					//JOptionPane.showMessageDialog(null, "cerrado automatico");
 					workSpace.remove(d);
 				}
-				/*try {
-					ach.SaveFile(txtTrabajo,Ventana.this);					//Metodo que Guarda Archivo
-				} catch (IOException e1) {
-						e1.printStackTrace();
-				}*/
-				//					//quita la pestaña actual
+				
 			}else{
 				System.exit(0);		//Sale de la aplicacion
 			}

@@ -17,7 +17,6 @@ public class Lista<E> {
 			fin = n;
 			return true;
 		}
-		//Nodo<E> aux = ini;
 		fin.sig = n;
 		n.ant = fin;
 		fin = n;
