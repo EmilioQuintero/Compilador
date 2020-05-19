@@ -18,12 +18,14 @@ public class Documento2 extends DefaultStyledDocument{
 	private StyleContext cont;
 	private AttributeSet attr,attrBlack;
 	private final static Color r_PR = new Color(127, 0, 145);
+			//r_CAD = new Color(42, 0, 255);
 	private ArrayList<coloreado> a;
 	String currentString,oldString;
 	public Documento2() {
 		cont = StyleContext.getDefaultStyleContext();
         attr = cont.addAttribute(cont.getEmptySet(),StyleConstants.Foreground,Color.red);
         attrBlack = cont.addAttribute(cont.getEmptySet(), StyleConstants.Foreground, Color.BLACK);
+        //attrBlue = cont.addAttribute(cont.getEmptySet(), StyleConstants.Foreground, r_CAD);
 	}
 	
 	@Override
@@ -56,6 +58,7 @@ public class Documento2 extends DefaultStyledDocument{
 	
 	private void colorea() throws BadLocationException{
 		String t = getText(0, getLength()), P = "";
+		//JOptionPane.showMessageDialog(null, t);
 		currentString = t;
 		t += " ";
 		int delimitador =  0;
@@ -77,6 +80,7 @@ public class Documento2 extends DefaultStyledDocument{
 				P += car;
 				delimitador = i;
 				if(P.length() > 0){
+					//if(palabraRes(P)){
 						a.add(new coloreado(delimitador-P.length(), P));
 					//}
 					P = "";

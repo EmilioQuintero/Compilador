@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextPane;
 
 public class Archivo {
+//	Variables de Control
 			public String nombreArch = null;
 			private File guardar = null;
 			boolean guardado = false;
@@ -22,13 +23,14 @@ public class Archivo {
 		nombreArch = null;
 	}
 	
-	public String OpenFile(JFrame jf){	
+	public String OpenFile(JFrame jf){	 //Abrir Archivo
 		String documento="", aux = "";
 		JFileChooser file = new JFileChooser();
 		File abre = null;
 		if(file.showOpenDialog(jf) == JFileChooser.APPROVE_OPTION){
 			try  {
 			   abre=file.getSelectedFile();
+			   //JOptionPane.showMessageDialog(null, abre);
 			   if(abre!=null) {  
 				  guardar=abre;
 				  FileReader archivos=new FileReader(guardar);
